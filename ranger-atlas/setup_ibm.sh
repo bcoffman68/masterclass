@@ -4,10 +4,22 @@
 # - vCPUs: 16
 # - Memory: 64GB RAM
 # - Disk: 100 GB
-# - Make sure that ext4 or xfs is used for /kudu e.g. mkdir /kudu; mkfs -ext4 /dev/vdd; mount /dev/vdd /kudu
+# - Make sure that ext4 or xfs is used for /kudu e.g. 
+# - fdisk -l
+# -    Command (m for help): n
+# -    Partition number (1-128, default 1): 
+# -    First sector (34-209715166, default 2048): 
+# -    Last sector, +sectors or +size{K,M,G,T,P} (2048-209715166, default 209715166): 
+# -    Created partition 1
+# -    Command (m for help): w
+# -    The partition table has been altered!
+# - fdisk /dev/vdd
+# - mkdir /kudu
+# - mkfs -t ext4 /dev/vdd
+# - mount /dev/vdd /kudu
 
 #Run by:
-#curl -sSL https://raw.githubusercontent.com/abajwa-hw/masterclass/master/ranger-atlas/setup_ibm.sh | sudo -E sh
+# curl -sSL https://raw.githubusercontent.com/abajwa-hw/masterclass/master/ranger-atlas/setup_ibm.sh | sudo -E sh
 
 #!/bin/bash
 host=$(hostname)
