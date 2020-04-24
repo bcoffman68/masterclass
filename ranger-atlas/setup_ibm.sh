@@ -4,7 +4,8 @@
 # - vCPUs: 16
 # - Memory: 64GB RAM
 # - Disk: 100 GB
-# - Make sure that ext4 or xfs is used for /kudu e.g. mkdir /kudu; mkfs -ext4 /dev/vdd; mount /dev/vdd /kudu
+# - Make sure that ext4 or xfs is used for /kudu e.g. 
+# - fdisk -l /dev/vdd; mkdir /kudu; mkfs -t ext4 /dev/vdd; mount /dev/vdd /kudu;
 
 #Run by:
 #curl -sSL https://raw.githubusercontent.com/abajwa-hw/masterclass/master/ranger-atlas/setup_ibm.sh | sudo -E sh
